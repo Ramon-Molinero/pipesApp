@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-//Módulo Personalizado PrimeNg
-import { PrimeNgModule } from './primeNg/primeNg.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +14,7 @@ import { PrimeNgModule } from './primeNg/primeNg.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PrimeNgModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
