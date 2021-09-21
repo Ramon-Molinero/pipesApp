@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './basicos.component.html',
   styleUrls: ['./basicos.component.scss']
 })
-export class BasicosComponent implements OnInit {
+export class BasicosComponent {
 
-  constructor() { }
+subHeader: string = 'Pipe Básico';
 
-  ngOnInit() {
-  }
+date: Date = new Date();
+
 
 }

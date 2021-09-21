@@ -1,10 +1,20 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { VentasModule } from './ventas/ventas.module';
+
+// cambiar locale de app
+
+import localES from '@angular/common/locales/es';
+import localeFr from '@angular/common/locales/fr';
+
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData( localES );
+registerLocaleData( localeFr);
 
 
 @NgModule({
@@ -14,10 +24,13 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppRoutingModule,
     SharedModule,
-    AppRoutingModule
+    VentasModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
