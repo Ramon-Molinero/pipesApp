@@ -1,10 +1,25 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { BasicosComponent } from './pages/basicos/basicos.component';
+import { NoComunesComponent } from './pages/noComunes/noComunes.component';
+import { NumerosComponent } from './pages/numeros/numeros.component';
+import { PersonalizadosComponent } from './pages/personalizados/personalizados.component';
+
+
 
 
 @NgModule({
   imports: [
-    CommonModule
-  ]
+    NumerosComponent,
+    BasicosComponent,
+    NoComunesComponent,
+    PersonalizadosComponent,
+  ],
+  exports: [
+    NumerosComponent,
+    BasicosComponent,
+    NoComunesComponent,
+    PersonalizadosComponent,
+  ],
 })
-export class VentasModule { }
+export class VentasModule {}
