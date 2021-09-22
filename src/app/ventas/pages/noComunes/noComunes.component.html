@@ -1,3 +1,137 @@
-<p>
-  noComunes works!
-</p>
+<div class="text-layout">
+  <h1>I18nSelect | I18nPlural</h1>
+  <p>Pipes incluidos en Angular - Usualmente en Common Module</p>
+</div>
+
+<div class="grid mt-3">
+  <div class="md:col-6 sm:col-12">
+    <p-fieldset legend="I18nSelect Pipe" [toggleable]="true">
+      Selector genérico que muestra un string que coincide con el valor actual.
+      <br /><br />
+      value_expression | i18nSelect : mapping
+      <br /><br /><br />
+      femGender | i18nSelect: mapping
+      <br /><br />
+      Saludos {{ femName }}, es un placer {{ femGender | i18nSelect: mapping }} a nuestro evento.
+      <br /><br /><br />
+      maleGender | i18nSelect: mapping
+      <br /><br />
+      Saludos {{ maleName }}, es un placer {{ maleGender | i18nSelect: mapping }} a nuestro evento.
+      <br /><br />
+
+      <hr class="mb-3" />
+
+      <h4>Ejercicio i18Select</h4>
+      {{ gender | i18nSelect: selectMapping }} {{ name }}, gracias por su invitación.
+      <br />
+      <button
+        pButton
+        type="button"
+        label="Cambiar nombre"
+        class="mt-4 p-button-success"
+        (click)="changeName()"
+      ></button>
+    </p-fieldset>
+  </div>
+
+  <div class="md:col-6 sm:col-12">
+    <p-fieldset legend="I18nPlural Pipe" [toggleable]="true">
+      Asigna un valor a un string que pluraliza el valor según la configuración regional.
+      <br /><br />
+      value_expression | i18nPlural : pluralMap [ : locale ]
+      <br /><br /><br />
+      clientes.length | i18nPlural:clientesMapping
+      <br /><br />
+      Actualmente {{ clientes.length | i18nPlural: clientesMapping }}. <br /><br /><br />
+      clientes2.length | i18nPlural:clientesMapping
+      <br /><br />
+      Actualmente {{ clientes2.length | i18nPlural: clientesMapping }}. <br /><br />
+
+      <hr class="mb-3" />
+
+      <h4>Ejercicio i18Plural</h4>
+
+      En la lista de espera {{ personas.length | i18nPlural: personasMapping }}
+      <br />
+      <button
+        pButton
+        type="button"
+        label="Borrar Persona"
+        class="mt-4 p-button-success"
+        (click)="deletePersona()"
+      ></button>
+    </p-fieldset>
+  </div>
+
+  <div class="md:col-6 sm:col-12">
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+      Crea un nuevo Array o String que contiene un subconjunto (sector) de los elementos.
+      <br /><br />
+      value_expression | slice : start [ : end ]
+      <br /><br /><br />
+      Original
+      <br /><br />
+      {{ personas }}
+      <br /><br /><br />
+      personas | slice: 0 : 3
+      <br /><br />
+      {{ personas | slice: 0:3 }}
+      <br /><br /><br />
+      personas | slice: 1 : 5
+      <br /><br />
+      {{ personas | slice: 1:5 }}
+      <br /><br /><br />
+      'Hermenegildo' | slice: 1 : 5
+      <br /><br />
+      {{ 'Hermenegildo' | slice: 0:5 }}
+    </p-fieldset>
+  </div>
+
+  <div class="md:col-6 sm:col-12">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      Transforma Objeto o Mapa en una matriz de pares clave-valor.
+      <br /><br /><br />
+      input_expression | keyvalue [ : compareFn ]
+      <br /><br /><br />
+      *ngFor="let item of persona | keyvalue"
+      <br /><br />
+      item.key | titlecase : item.value
+      <br /><br />
+      <ul>
+        <li *ngFor="let item of persona | keyvalue" class="mb-3">
+          <b> {{ item.key | titlecase }}</b> : {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+
+  <div class="md:col-6 sm:col-12">
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+      Convierte un valor en su representación en formato JSON. Útil para depurar.
+      <br /><br />
+      value_expression | json
+      <br /><br /><br />
+
+      {{ heroes | json }}
+      <br /><br /><br />
+
+      {{ persona | json }}
+    </p-fieldset>
+  </div>
+
+  <div class="md:col-6 sm:col-12">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      Desenvuelve un valor de una primitiva asincrónica
+      <br /><br />
+      obj_expression | async
+      <br /><br /><br />
+      obs | async
+      <br><br>
+      {{obs | async}}
+      <br /><br /><br />
+      valorPromesa | async
+      <br><br>
+      {{valorPromesa | async}}
+    </p-fieldset>
+  </div>
+</div>
