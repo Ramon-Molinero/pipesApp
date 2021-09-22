@@ -1,72 +1,69 @@
 <div class="text-layout">
-  <h1>DecimalPipe | CurrencyPipe | PercentPipe</h1>
+  <h1>Decimal | Currency | Percent</h1>
   <p>Pipes incluidos en Angular - Usualmente en Common Module</p>
 </div>
 
 <div class="grid mt-3">
-  <div class="col-4">
-    <p-card header="DécimalPipe"
-      subheader="pipe básico">
-      Formatea un valor de acuerdo con las opciones de dígitos y las reglas de configuración regional.
-      <br><br><br>
-    ventasNetas | number
-      <br><br>
-    {{ventasNetas}} = {{ventasNetas | number}}
-    
-      <br><br><br>
-    ventasNetas | number : ' 1.2-2 '
-      <br><br>
-    {{ventasNetas}} = {{ventasNetas | number:'1.2-2'}}
-    
-      <br><br><br>
-    ventasNetas | number : ' 1.2-2 ' : ' fr '
-    <br><br>
-    {{ventasNetas}} = {{ventasNetas | number:'1.2-2':'fr'}}
-    
+  <div class="md:col-4 sm:col-12">
+    <p-card header="Décimal Pipe" subheader="pipe básico">
+      Formatea un valor de acuerdo con las opciones de dígitos y las reglas de configuración
+      regional.
+      <br /><br /><br />
+      ventasNetas | number
+      <br /><br />
+      {{ ventasNetas }} = {{ ventasNetas | number }}
+
+      <br /><br /><br />
+      ventasNetas | number : ' 1.2-2 '
+      <br /><br />
+      {{ ventasNetas }} = {{ ventasNetas | number: '1.2-2' }}
+
+      <br /><br /><br />
+      ventasNetas | number : ' 1.2-2 ' : ' fr '
+      <br /><br />
+      {{ ventasNetas }} = {{ ventasNetas | number: '1.2-2':'fr' }}
     </p-card>
   </div>
 
-   <div class="col-4">
-    <p-card header="CurrencyPipe"
-      subheader="pipe básico">
-      Transforma un número en una string de moneda, formateada de acuerdo con la configuración regional.
-      <br><br><br>
-    ventasNetas | currency
-      <br><br>
-    {{ventasNetas}} = {{ventasNetas | currency}}
-    
-      <br><br><br>
-    ventasNetas | currency : ' CAD '
-      <br><br>
-    {{ventasNetas}} = {{ventasNetas | currency:'CAD'}}
-    
-      <br><br><br>
-    v.n | currency : ' EUR ' : 'symbol-narrow' : '1.4-4'
-    <br><br>
-    {{ventasNetas}} = {{ventasNetas | currency:'EUR':'symbol-narrow':'1.4-4'}}
-    
+  <div class="md:col-4 sm:col-12">
+    <p-card header="Currency Pipe" subheader="pipe básico">
+      Transforma un número en una string de moneda, formateada de acuerdo con la configuración
+      regional.
+      <br /><br /><br />
+      ventasNetas | currency
+      <br /><br />
+      {{ ventasNetas }} = {{ ventasNetas | currency }}
+
+      <br /><br /><br />
+      ventasNetas | currency : ' CAD '
+      <br /><br />
+      {{ ventasNetas }} = {{ ventasNetas | currency: 'CAD' }}
+
+      <br /><br /><br />
+      v.n | currency : ' EUR ' : 'symbol-narrow' : '1.4-4'
+      <br /><br />
+      {{ ventasNetas }} = {{ ventasNetas | currency: 'EUR':'symbol-narrow':'1.4-4' }}
     </p-card>
   </div>
 
-   <div class="col-4">
-    <p-card header="PercentPipe"
-      subheader="pipe básico">
-      Transforma un número en una string de porcentaje, formateada de acuerdo con la configuración regional.
-      <br><br><br>
-    porcentaje | currency
-      <br><br>
-    {{porcentaje}} = {{porcentaje | percent}}
-    
-      <br><br><br>
-    porcentaje | currency : ' 1.2-2 '
-      <br><br>
-    {{porcentaje}} = {{porcentaje | percent: '1.2-2'}}
+  <div class="md:col-4 sm:col-12">
+    <p-card header="Percent Pipe" subheader="pipe básico">
+      Transforma un número en una string de porcentaje, formateada de acuerdo con la configuración
+      regional.
+      <br /><br /><br />
+      porcentaje | currency
+      <br /><br />
+      {{ porcentaje }} = {{ porcentaje | percent }}
 
-    <br><br><br>
-    porcentaje | currency : ' 1.3-3 '
-      <br><br>
-    {{porcentaje}} = {{porcentaje | percent: '1.3-3'}}
-    
+      <br /><br /><br />
+      porcentaje | currency : ' 1.2-2 '
+      <br /><br />
+      {{ porcentaje }} = {{ porcentaje | percent: '1.2-2' }}
+
+      <br /><br /><br />
+      porcentaje | currency : ' 1.3-3 '
+      <br /><br />
+      {{ porcentaje }} = {{ porcentaje | percent: '1.3-3' }}
     </p-card>
   </div>
 </div>

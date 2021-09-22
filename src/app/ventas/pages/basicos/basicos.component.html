@@ -4,31 +4,27 @@
 
   <div class="grid mt-4">
     <div class="col-4">
-      <p-card header="uppercase" 
-        [subheader]="subHeader | lowercase">
+      <p-card header="uppercase" [subheader]="subHeader | lowercase">
         {{ 'Transforma todo el texto a mayúsculas.' | uppercase }}
-        <br/><br/>
-        value_expression | uppercase 
+        <br /><br />
+        value_expression | uppercase
       </p-card>
     </div>
     <div class="col-4">
-      <p-card header="lowercase" 
-        [subheader]="subHeader | lowercase">
+      <p-card header="lowercase" [subheader]="subHeader | lowercase">
         {{ 'Transforma TODO el texto a minúsculas.' | lowercase }}
-        <br/><br/>
-        value_expression | lowercase 
+        <br /><br />
+        value_expression | lowercase
       </p-card>
     </div>
     <div class="col-4">
-      <p-card header="titlecase" 
-        [subheader]="subHeader | lowercase">
+      <p-card header="titlecase" [subheader]="subHeader | lowercase">
         {{ 'transforma el texto en mayúsculas y minúsculas.' | titlecase }}
-        <br/><br/>
-        value_expression | titlecase 
+        <br /><br />
+        value_expression | titlecase
       </p-card>
     </div>
   </div>
-
 </div>
 
 <div class="text-layout">
@@ -51,7 +47,7 @@
           <li class="mb-2">Fecha | date : 'dd MMMM yyyy'</li>
         </ul>
 
-        <hr class="my-5">
+        <hr class="my-5" />
 
         <ul>
           <li class="mb-2">date | date: 'long' : 'GMT-4'</li>
@@ -64,28 +60,27 @@
     <div class="col-6">
       <p-card header="Resultado">
         <ul>
-          <li class="mb-2">{{date}}</li>
-          <li class="mb-2">{{date | date}}</li>
-          <li class="mb-2">{{date | date:'short'}}</li>
-          <li class="mb-2">{{date | date:'long'}}</li>
-          <li class="mb-2">{{date | date:'shortDate'}}</li>
-          <li class="mb-2">{{date | date:'longDate'}}</li>
-          <li class="mb-2">{{date | date:'fullDate'}}</li>
-          <li class="mb-2">{{date | date:'shortTime'}}</li>
-          <li class="mb-2">{{date | date:'d/MM/yy h:mm'}}</li>
-          <li class="mb-2">{{date | date:'dd MMMM yyyy'}}</li>
+          <li class="mb-2">{{ date }}</li>
+          <li class="mb-2">{{ date | date }}</li>
+          <li class="mb-2">{{ date | date: 'short' }}</li>
+          <li class="mb-2">{{ date | date: 'long' }}</li>
+          <li class="mb-2">{{ date | date: 'shortDate' }}</li>
+          <li class="mb-2">{{ date | date: 'longDate' }}</li>
+          <li class="mb-2">{{ date | date: 'fullDate' }}</li>
+          <li class="mb-2">{{ date | date: 'shortTime' }}</li>
+          <li class="mb-2">{{ date | date: 'd/MM/yy h:mm' }}</li>
+          <li class="mb-2">{{ date | date: 'dd MMMM yyyy' }}</li>
         </ul>
 
-        <hr class="my-5">
+        <hr class="my-5" />
 
         <ul>
-          <li class="mb-2">{{date | date:'long': 'GMT-4'}}</li>
-          <li class="mb-2">{{date | date:'long': 'GMT-6'}}</li>
-          <li class="mb-2">{{date | date:'long':'':'en'}}</li>
-          <li class="mb-2">{{date | date:'long':'':'fr'}}</li>
+          <li class="mb-2">{{ date | date: 'long':'GMT-4' }}</li>
+          <li class="mb-2">{{ date | date: 'long':'GMT-6' }}</li>
+          <li class="mb-2">{{ date | date: 'long':'':'en' }}</li>
+          <li class="mb-2">{{ date | date: 'long':'':'fr' }}</li>
         </ul>
       </p-card>
     </div>
-
   </div>
 </div>
