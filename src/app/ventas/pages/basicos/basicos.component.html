@@ -1,0 +1,86 @@
+<div class="text-layout">
+  <h1>Pipes Básicos</h1>
+  <p>Pipes incluidos en Angular - Usualmente en Common Module</p>
+
+  <div class="grid mt-4">
+    <div class="col-4">
+      <p-card header="uppercase" [subheader]="subHeader | lowercase">
+        {{ 'Transforma todo el texto a mayúsculas.' | uppercase }}
+        <br /><br />
+        value_expression | uppercase
+      </p-card>
+    </div>
+    <div class="col-4">
+      <p-card header="lowercase" [subheader]="subHeader | lowercase">
+        {{ 'Transforma TODO el texto a minúsculas.' | lowercase }}
+        <br /><br />
+        value_expression | lowercase
+      </p-card>
+    </div>
+    <div class="col-4">
+      <p-card header="titlecase" [subheader]="subHeader | lowercase">
+        {{ 'transforma el texto en mayúsculas y minúsculas.' | titlecase }}
+        <br /><br />
+        value_expression | titlecase
+      </p-card>
+    </div>
+  </div>
+</div>
+
+<div class="text-layout">
+  <h1>Date | Fecha | Pipe</h1>
+  <p>Pipe para mostrar fechas y dar formatos</p>
+
+  <div class="grid mt-4">
+    <div class="col-6">
+      <p-card header="Aplicación">
+        <ul>
+          <li class="mb-2">Fecha</li>
+          <li class="mb-2">Fecha | date</li>
+          <li class="mb-2">Fecha | date : 'short'</li>
+          <li class="mb-2">Fecha | date : 'long'</li>
+          <li class="mb-2">Fecha | date : 'shortDate'</li>
+          <li class="mb-2">Fecha | date : 'longDate'</li>
+          <li class="mb-2">Fecha | date : 'fullDate'</li>
+          <li class="mb-2">Fecha | date : 'shortTime'</li>
+          <li class="mb-2">Fecha | date : 'd/MM/yy h:mm'</li>
+          <li class="mb-2">Fecha | date : 'dd MMMM yyyy'</li>
+        </ul>
+
+        <hr class="my-5" />
+
+        <ul>
+          <li class="mb-2">date | date: 'long' : 'GMT-4'</li>
+          <li class="mb-2">date | date: 'long' : 'GMT-6'</li>
+          <li class="mb-2">date | date: 'long' : '' : 'en'</li>
+          <li class="mb-2">date | date: 'long' : '' : 'fr'</li>
+        </ul>
+      </p-card>
+    </div>
+    <div class="col-6">
+      <p-card header="Resultado">
+        <ul>
+          <li class="mb-2">{{ date }}</li>
+          <li class="mb-2">{{ date | date }}</li>
+          <li class="mb-2">{{ date | date: 'short' }}</li>
+          <li class="mb-2">{{ date | date: 'long' }}</li>
+          <li class="mb-2">{{ date | date: 'shortDate' }}</li>
+          <li class="mb-2">{{ date | date: 'longDate' }}</li>
+          <li class="mb-2">{{ date | date: 'fullDate' }}</li>
+          <li class="mb-2">{{ date | date: 'shortTime' }}</li>
+          <li class="mb-2">{{ date | date: 'd/MM/yy h:mm' }}</li>
+          <li class="mb-2">{{ date | date: 'dd MMMM yyyy' }}</li>
+        </ul>
+
+        <hr class="my-5" />
+
+        <ul>
+          <li class="mb-2">{{ date | date: 'long':'GMT-4' }}</li>
+          <li class="mb-2">{{ date | date: 'long':'GMT-6' }}</li>
+          <li class="mb-2">{{ date | date: 'long':'':'en' }}</li>
+          <li class="mb-2">{{ date | date: 'long':'':'fr' }}</li>
+        </ul>
+      </p-card>
+    </div>
+  </div>
+</div>
