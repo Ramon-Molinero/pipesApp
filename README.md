@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
+## Description
+
+Creation of an application to visualize the behavior of the PIPEs that Angular + 2 has in addition to the creation of its own PIPEs
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
