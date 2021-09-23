@@ -6,6 +6,8 @@ import { NoComunesComponent } from './pages/noComunes/noComunes.component';
 import { NumerosComponent } from './pages/numeros/numeros.component';
 import { PersonalizadosComponent } from './pages/personalizados/personalizados.component';
 import { CommonModule } from '@angular/common';
+import { MayusculasPipe } from './pipes/mayusculas.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 
 
@@ -16,7 +18,9 @@ import { CommonModule } from '@angular/common';
     NumerosComponent,
     BasicosComponent,
     NoComunesComponent,
-    PersonalizadosComponent
+    PersonalizadosComponent,
+    MayusculasPipe,
+    SortPipe
   ],
   exports: [
     NumerosComponent,

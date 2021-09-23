@@ -1,3 +1,132 @@
-<p>
-  personalizados works!
-</p>
+<div class="text-layout">
+  <h1>Pipes Personalizados</h1>
+  <p>Pipes no incluidos en Angular - Creación personalizada</p>
+</div>
+
+<p-toolbar>
+    <div class="p-toolbar-group-left">
+        
+    </div>
+    
+    <div class="p-toolbar-group-right">
+        <button pButton 
+          icon="pi pi-sort" 
+          type="button" 
+          label="Por nombre" 
+          class=" mx-2 p-button-warning"
+          (click)="sortList('nombre')">
+        </button>
+        <button pButton 
+          icon="pi pi-sort" 
+          type="button" 
+          label="Poder" 
+          class=" mx-2 p-button-success"
+          (click)="sortList('poder')">
+        </button>
+        <button pButton 
+          icon="pi pi-sort" 
+          type="button" 
+          label="Color" 
+          class=" mx-2"
+          (click)="sortList('color')">
+        </button>
+        <button pButton 
+          type="button" 
+          icon="pi pi-sort" 
+          label="Máyusculas" 
+          class="p-button-help ml-2" 
+          (click)="changeUppercase()">
+        </button>
+    </div>
+</p-toolbar>
+
+<div class="grid mt-1">
+  <!-- <p-card class="md:col-6 sm:col-12"
+  header="Uppercase"
+  subheader="Pipe Personalizado">
+
+  Creación del un pipe personalizado simulando UppercasePipe
+  <br><br><br>
+   transform(value: string, mayusculas: boolean = true): string
+   <br>
+    return (mayusculas) ? value.toUpperCase() : value.toLowerCase();
+  <br><br>
+  <h4>Ejercicio Uppercase Pipe Personalizada</h4>
+  
+  {{'Cambiando texto a mayúsculas a minúsculas' | mayusculas:isUpperCase}}
+  <br><br>
+  <button pButton type="button" 
+    label="Cambiar texto" 
+    class="p-button-success mt-2"
+    (click)="changeUppercase()"></button>
+  
+</p-card> -->
+<div class="col">
+  <p-table [value]="heroes | sort: orderBy" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nombre</th>
+            <th>Poder</th>
+            <th>Color</th>
+            
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-heroe>
+        <tr>
+            <td>{{heroe.nombre | mayusculas:isUpperCase}}</td>
+            <td>{{heroe.poder | mayusculas:isUpperCase}}</td>
+            <td>{{heroe.color}}</td>
+            
+        </tr>
+    </ng-template>
+</p-table>
+</div>
+
+
+</div>
+
+<div class="grid mt-1">
+  <!-- <p-card class="md:col-6 sm:col-12"
+  header="Uppercase"
+  subheader="Pipe Personalizado">
+
+  Creación del un pipe personalizado simulando UppercasePipe
+  <br><br><br>
+   transform(value: string, mayusculas: boolean = true): string
+   <br>
+    return (mayusculas) ? value.toUpperCase() : value.toLowerCase();
+  <br><br>
+  <h4>Ejercicio Uppercase Pipe Personalizada</h4>
+  
+  {{'Cambiando texto a mayúsculas a minúsculas' | mayusculas:isUpperCase}}
+  <br><br>
+  <button pButton type="button" 
+    label="Cambiar texto" 
+    class="p-button-success mt-2"
+    (click)="changeUppercase()"></button>
+  
+</p-card> -->
+<div class="col">
+  <p-table [value]="heroes | slice:0" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th pSortableColumn="nombre">Nombre <p-sortIcon field="nombre"></p-sortIcon> </th>
+            <th pSortableColumn="poder">Poder <p-sortIcon field="poder"></p-sortIcon> </th>
+            <th pSortableColumn="color">Color <p-sortIcon field="color"></p-sortIcon> </th>
+            
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-heroe>
+        <tr>
+            <td>{{heroe.nombre}}</td>
+            <td>{{heroe.poder}}</td>
+            <td>{{heroe.color}}</td>
+            
+        </tr>
+    </ng-template>
+</p-table>
+</div>
+
+
+</div>
+
