@@ -1,27 +1,75 @@
 # PipesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+Este proyecto trata de una aplicación diseñada para explorar y demostrar el uso de **pipes** en Angular, incluyendo pipes comunes, personalizados y la gestión de datos a través de componentes dinámicos. La aplicación también implementa diseños responsivos y utiliza la biblioteca PrimeNG para optimizar la experiencia de usuario.
 
-## Development server
+## **Descripción**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+La aplicación muestra cómo aplicar distintos **pipes** nativos y personalizados de Angular para transformar datos. También se incorporan funcionalidades avanzadas como:
 
-## Code scaffolding
+- 📄 **Pipes personalizados:** para convertir textos (mayúsculas/minúsculas) y ordenar listas dinámicamente.
+- 📊 **Tablas interactivas:** con PrimeNG, permitiendo ordenación y visualización optimizada de datos.
+- 🌐 **Navegación dinámica:** mediante rutas y componentes modulares.
+- 🛠️ **Módulos compartidos:** para mejorar la reutilización de componentes y optimización del proyecto.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## **Requisitos previos**
 
-## Build
+- Node.js y npm instalados.
+- Angular CLI versión 12.1.2 o superior.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## **Pasos de instalación**
 
-## Running unit tests
+### 1. Clonar el repositorio
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone https://github.com/ramon-molinero/news-app.git
+```
 
-## Running end-to-end tests
+### 2. Instalar dependencias
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install
+```
 
-## Further help
+### 3. Configurar claves de la API de News
+Edita `src/environments/environment.ts` y `src/environments/environment.prod.ts` con la clave de la API.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 4. Iniciar el servidor de desarrollo
+
+```bash
+ionic serve
+```
+
+### 5. Construir para móviles
+
+- **Android:**
+  ```bash
+  ionic capacitor build android
+  ```
+
+- **iOS:**
+  ```bash
+  ionic capacitor build ios
+  ```
+
+### 6. Sincronizar cambios con Capacitor
+
+```bash
+ionic capacitor sync
+```
+
+## **Construcción del proyecto**
+
+Para crear una compilación optimizada para producción:
+
+```bash
+ng build --prod
+```
+Los artefactos de construcción se almacenarán en el directorio `dist/`.
+
+## **Dependencias principales**
+
+- **Angular Core:** 12.1.2
+- **PrimeNG:** 12.1.1
+- **PrimeFlex:** 3.0.1
+- **Zone.js:** ~0.11.4
+- **RxJS:** ~6.6.0
