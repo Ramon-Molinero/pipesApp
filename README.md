@@ -21,7 +21,7 @@ La aplicación muestra cómo aplicar distintos **pipes** nativos y personalizado
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/ramon-molinero/news-app.git
+
 ```
 
 ### 2. Instalar dependencias
@@ -30,46 +30,3 @@ git clone https://github.com/ramon-molinero/news-app.git
 npm install
 ```
 
-### 3. Configurar claves de la API de News
-Edita `src/environments/environment.ts` y `src/environments/environment.prod.ts` con la clave de la API.
-
-### 4. Iniciar el servidor de desarrollo
-
-```bash
-ionic serve
-```
-
-### 5. Construir para móviles
-
-- **Android:**
-  ```bash
-  ionic capacitor build android
-  ```
-
-- **iOS:**
-  ```bash
-  ionic capacitor build ios
-  ```
-
-### 6. Sincronizar cambios con Capacitor
-
-```bash
-ionic capacitor sync
-```
-
-## **Construcción del proyecto**
-
-Para crear una compilación optimizada para producción:
-
-```bash
-ng build --prod
-```
-Los artefactos de construcción se almacenarán en el directorio `dist/`.
-
-## **Dependencias principales**
-
-- **Angular Core:** 12.1.2
-- **PrimeNG:** 12.1.1
-- **PrimeFlex:** 3.0.1
-- **Zone.js:** ~0.11.4
-- **RxJS:** ~6.6.0
