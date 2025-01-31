@@ -66,3 +66,8 @@ npm run build
 - **Navegación Modular**: Gestión ordenada de rutas y componentes a través de módulos como **VentasModule** y **SharedModule**.
 - **Interfaz Amigable**: Diseño responsivo y fácil de usar con PrimeNG y PrimeFlex.
 - **Pruebas Unitarias**: Configuración y ejecución de pruebas unitarias para garantizar la calidad del código.
+
+  
+## **Notas** 📚
+
+Esta aplicación está configurada para ejecutarse en modo local o con un servidor remoto especificado en el entorno de producción.
