@@ -53,12 +53,16 @@ npm run start
 npm run build
 ```
 
+---
+
 ## **Stack de tecnologías**  🛠️
 - **Angular**: Desarrollo de SPA.
 - **TypeScript**: Superset de JavaScript para código tipado.
 - **PrimeNG**: Componentes de interfaz de usuario avanzados.
 - **PrimeFlex**: Utilidades de CSS para diseño responsivo.
 - **RxJS**: Programación reactiva.
+
+---
 
 ## **Stack de tecnologías**  🔍
 - **Pipes Personalizados**: Implementación de pipes como **MayusculasPipe** y **SortPipe** para transformar y ordenar datos.
@@ -67,6 +71,7 @@ npm run build
 - **Interfaz Amigable**: Diseño responsivo y fácil de usar con PrimeNG y PrimeFlex.
 - **Pruebas Unitarias**: Configuración y ejecución de pruebas unitarias para garantizar la calidad del código.
 
+---
   
 ## **Notas** 📚
 
