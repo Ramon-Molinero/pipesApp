@@ -1,6 +1,7 @@
-<p align="center">
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <a href="https://angular.io/" target="blank"><img src="https://angular.io/assets/images/logos/angular/angular.svg" width="120" alt="Angular Logo" /></a>
-</p>
+  <a href="https://ionicframework.com/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ionic_Logo.svg/1280px-Ionic_Logo.svg.png" width="120" alt="Ionic Logo" /></a>
+</div>
 
 # PipesApp 🚀
 
